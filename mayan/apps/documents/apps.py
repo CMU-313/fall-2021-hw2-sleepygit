@@ -34,7 +34,7 @@ from mayan.apps.templating.classes import AJAXTemplate
 from mayan.apps.views.html_widgets import TwoStateWidget
 
 from .dashboard_widgets import (
-    DashboardWidgetDocumentFilePagesTotal, DashboardWidgetDocumentsInTrash,
+    DashboardWidgetApplicationDashboard, DashboardWidgetDocumentFilePagesTotal, DashboardWidgetDocumentsInTrash,
     DashboardWidgetDocumentsNewThisMonth,
     DashboardWidgetDocumentsPagesNewThisMonth, DashboardWidgetDocumentsTotal,
     DashboardWidgetDocumentsTypesTotal,
@@ -677,6 +677,11 @@ class DocumentsApp(MayanAppConfig):
         dashboard_main.add_widget(
             widget=DashboardWidgetDocumentsTotal, order=0
         )
+
+        dashboard_main.add_widget(
+            widget=DashboardWidgetApplicationDashboard, order=6
+        )
+
         dashboard_main.add_widget(
             widget=DashboardWidgetDocumentFilePagesTotal, order=1
         )
