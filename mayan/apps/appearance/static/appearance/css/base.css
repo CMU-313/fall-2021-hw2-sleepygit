@@ -393,6 +393,21 @@ a i {
     color: #f0ad4e;
 }
 
+.btn-danger {
+    background-color: #502c3e !important;
+    border-color: #502c3e !important;
+}
+
+.btn-danger:hover {
+    background-color: #2f1a25 !important;
+    border-color: #1f1118 !important;
+}
+
+.btn-danger:active:focus, .open>.dropdown-toggle.btn-danger:hover, .open>.dropdown-toggle.btn-danger:focus {
+    background-color: #1f1118 !important;
+    border-color: #1f1118 !important;
+}
+
 .btn-danger.btn-outline {
     color: #d9534f;
 }
