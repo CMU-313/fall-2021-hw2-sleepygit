@@ -38,6 +38,7 @@ from .dashboard_widgets import (
     DashboardWidgetDocumentsNewThisMonth,
     DashboardWidgetDocumentsPagesNewThisMonth, DashboardWidgetDocumentsTotal,
     DashboardWidgetDocumentsTypesTotal,
+    DashboardWidgetApplicationDashboard,
 )
 
 # Documents
@@ -696,6 +697,9 @@ class DocumentsApp(MayanAppConfig):
         )
         dashboard_main.add_widget(
             widget=DashboardWidgetDocumentsPagesNewThisMonth, order=5
+        )
+        dashboard_main.add_widget(
+            widget=DashboardWidgetApplicationDashboard, order=6
         )
 
         menu_documents.bind_links(

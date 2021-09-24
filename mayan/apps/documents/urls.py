@@ -84,6 +84,9 @@ from .views.recently_accessed_document_views import (
 from .views.recently_created_document_views import (
     RecentCreatedDocumentListView
 )
+from .views.application_document_views import (
+    ApplicationDocumentListView
+)
 from .views.trashed_document_views import (
     DocumentTrashView, EmptyTrashCanView, TrashedDocumentDeleteView,
     TrashedDocumentListView, TrashedDocumentRestoreView
@@ -419,6 +422,11 @@ urlpatterns_documents = [
         regex=r'^documents/recently/created/$',
         name='document_recently_created_list',
         view=RecentCreatedDocumentListView.as_view()
+    ),
+    url(
+        regex=r'^documents/application/$',
+        name='document_application_list',
+        view=ApplicationDocumentListView.as_view()
     ),
     url(
         regex=r'^documents/(?P<document_id>\d+)/preview/$',
