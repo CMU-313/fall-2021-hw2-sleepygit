@@ -15,7 +15,7 @@ from mayan.apps.views.generics import (
 )
 from mayan.apps.views.mixins import ExternalObjectViewMixin
 
-from .forms import TagMultipleSelectionForm
+from .forms import TagMultipleSelectionForm, ReviewerMultipleSelectionForm
 from .icons import icon_menu_tags, icon_document_tag_remove_submit
 from .links import link_document_tag_multiple_attach, link_tag_create
 from .models import DocumentTag, Tag
@@ -319,7 +319,7 @@ class TagRemoveActionView(MultipleObjectFormActionView):
             tag.remove_from(document=instance)
 
 class ReviewerAddActionView(MultipleObjectFormActionView):
-    form_class = TagMultipleSelectionForm
+    form_class = ReviewerMultipleSelectionForm
     object_permission = permission_tag_attach
     pk_url_kwarg = 'document_id'
     source_queryset = Document.valid
@@ -540,7 +540,7 @@ class DocumentReviewerListView(ExternalObjectViewMixin, TagListView):
 
 
 class ReviewerRemoveActionView(MultipleObjectFormActionView):
-    form_class = TagMultipleSelectionForm
+    form_class = ReviewerMultipleSelectionForm
     object_permission = permission_tag_remove
     pk_url_kwarg = 'document_id'
     source_queryset = Document.valid
