@@ -127,3 +127,22 @@ class DashboardWidgetDocumentsPagesNewThisMonth(DashboardWidgetNumeric):
     def render(self, request):
         self.count = new_document_pages_this_month(user=request.user)
         return super().render(request)
+
+
+class DashboardWidgetApplicationDashboard(DashboardWidgetNumeric):
+    icon = icon_dashboard_pages_per_month
+    label = _('Application Dashboard')
+    link = reverse_lazy(viewname='documents:document_application_list')
+
+    def render(self, request):
+        AccessControlList = apps.get_model(
+            app_label='acls', model_name='AccessControlList'
+        )
+        Document = apps.get_model(
+            app_label='documents', model_name='Document'
+        )
+        self.count = AccessControlList.objects.restrict_queryset(
+            permission=permission_document_view, user=request.user,
+            queryset=Document.valid.all()
+        ).count()
+        return super().render(request)
