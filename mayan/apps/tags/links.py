@@ -18,9 +18,17 @@ link_document_multiple_tag_multiple_attach = Link(
     icon=icon_document_tag_multiple_attach, text=_('Attach tags'),
     view='tags:multiple_documents_tag_attach'
 )
+link_document_multiple_reviewer_multiple_add = Link(
+    icon=icon_document_tag_multiple_attach, text=_('Add reviewers'),
+    view='tags:multiple_documents_reviewer_add'
+)
 link_document_multiple_tag_multiple_remove = Link(
     icon=icon_document_tag_multiple_remove, text=_('Remove tag'),
     view='tags:multiple_documents_selection_tag_remove'
+)
+link_document_multiple_reviewer_multiple_remove = Link(
+    icon=icon_document_tag_multiple_remove, text=_('Remove reviewer'),
+    view='tags:multiple_documents_selection_reviewer_remove'
 )
 link_document_tag_list = Link(
     args='resolved_object.pk', icon=icon_document_tag_list,
