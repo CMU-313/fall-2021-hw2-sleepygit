@@ -31,7 +31,7 @@ from .links import (
     link_document_multiple_reviewer_multiple_add,
     link_document_multiple_reviewer_multiple_remove
 )
-from .menus import menu_tags
+from .menus import menu_tags, menu_reviewers
 from .methods import method_document_get_tags
 from .permissions import (
     permission_tag_attach, permission_tag_delete, permission_tag_edit,
@@ -170,7 +170,14 @@ class TagsApp(MayanAppConfig):
             )
         )
 
+        menu_reviewers.bind_links(
+            links=(
+                link_tag_list, link_tag_create
+            )
+        )
+
         menu_main.bind_links(links=(menu_tags,), position=98)
+        menu_main.bind_links(links=(menu_reviewers,), position=98)
 
         menu_multi_item.bind_links(
             links=(

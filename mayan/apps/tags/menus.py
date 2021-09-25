@@ -13,3 +13,8 @@ menu_tags = Menu(
         view_permission=permission_tag_create,
     ), icon=icon_menu_tags, label=_('Tags'), name='tags'
 )
+
+menu_reviewers = Menu(
+    icon=icon_menu_tags, label=_('Reviewers'),
+    name='reviewers'
+)
