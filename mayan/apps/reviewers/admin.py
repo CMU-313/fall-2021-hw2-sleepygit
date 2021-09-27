@@ -4,6 +4,6 @@ from .models import Reviewer
 
 
 @admin.register(Reviewer)
-class TagAdmin(admin.ModelAdmin):
+class ReviewerAdmin(admin.ModelAdmin):
     filter_horizontal = ('documents',)
     list_display = ('label', 'color', 'get_preview_widget')

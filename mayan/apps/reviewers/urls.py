@@ -1,9 +1,9 @@
 from django.conf.urls import url
 
 from .api_views import (
-    APIDocumentTagAttachView, APIDocumentTagRemoveView,
-    APIDocumentTagListView, APITagDocumentListView, APITagListView,
-    APITagDetailView
+    APIDocumentReviewerAttachView, APIDocumentReviewerRemoveView,
+    APIDocumentReviewerListView, APIReviewerDocumentListView, APIReviewerListView,
+    APIReviewerDetailView
 )
 from .views import (
     DocumentReviewerListView, ReviewerAddActionView, ReviewerCreateView,
@@ -17,8 +17,8 @@ urlpatterns = [
         name='document_reviewer_list', view=DocumentReviewerListView.as_view()
     ),
     url(
-        regex=r'^documents/(?P<document_id>\d+)/tags/multiple/attach/$',
-        name='tag_attach', view=ReviewerActionView.as_view()
+        regex=r'^documents/(?P<document_id>\d+)/reviewers/multiple/attach/$',
+        name='reviewer_attach', view=ReviewerActionView.as_view()
     ),
     url(
         regex=r'^documents/(?P<document_id>\d+)/reviewers/multiple/add/$',
@@ -35,8 +35,8 @@ urlpatterns = [
         view=ReviewerRemoveActionView.as_view()
     ),
     url(
-        regex=r'^documents/multiple/tags/multiple/attach/$',
-        name='multiple_documents_tag_attach',
+        regex=r'^documents/multiple/reviewers/multiple/attach/$',
+        name='multiple_documents_reviewer_attach',
         view=ReviewerAttachActionView.as_view()
     ),
     url(
@@ -50,15 +50,15 @@ urlpatterns = [
         view=ReviewerCreateView.as_view()
     ),
     url(
-        regex=r'^reviewers/(?P<tag_id>\d+)/delete/$', name='reviewer_delete',
+        regex=r'^reviewers/(?P<reviewer_id>\d+)/delete/$', name='reviewer_delete',
         view=ReviewerDeleteActionView.as_view()
     ),
     url(
-        regex=r'^reviewers/(?P<tag_id>\d+)/edit/$', name='reviewer_edit',
+        regex=r'^reviewers/(?P<reviewer_id>\d+)/edit/$', name='reviewer_edit',
         view=ReviewerEditView.as_view()
     ),
     url(
-        regex=r'^reviewers/(?P<tag_id>\d+)/documents/$', name='reviewer_document_list',
+        regex=r'^reviewers/(?P<reviewer_id>\d+)/documents/$', name='reviewer_document_list',
         view=ReviewerDocumentListView.as_view()
     ),
     url(
@@ -68,25 +68,25 @@ urlpatterns = [
 ]
 
 api_urls = [
-    url(regex=r'^tags/$', view=APITagListView.as_view(), name='tag-list'),
+    url(regex=r'^reviewers/$', view=APIReviewerListView.as_view(), name='reviewer-list'),
     url(
-        regex=r'^tags/(?P<tag_id>[0-9]+)/$', view=APITagDetailView.as_view(),
-        name='tag-detail'
+        regex=r'^reviewer/(?P<reviewer_id>[0-9]+)/$', view=APIReviewerDetailView.as_view(),
+        name='reviewer-detail'
     ),
     url(
-        regex=r'^tags/(?P<tag_id>[0-9]+)/documents/$',
-        view=APITagDocumentListView.as_view(), name='tag-document-list'
+        regex=r'^reviewer/(?P<reviewer_id>[0-9]+)/documents/$',
+        view=APIReviewerDocumentListView.as_view(), name='reviewer-document-list'
     ),
     url(
-        regex=r'^documents/(?P<document_id>[0-9]+)/tags/$',
-        view=APIDocumentTagListView.as_view(), name='document-tag-list'
+        regex=r'^documents/(?P<document_id>[0-9]+)/reviewers/$',
+        view=APIDocumentReviewerListView.as_view(), name='document-reviewer-list'
     ),
     url(
-        regex=r'^documents/(?P<document_id>[0-9]+)/tags/attach/$',
-        name='document-tag-attach', view=APIDocumentTagAttachView.as_view()
+        regex=r'^documents/(?P<document_id>[0-9]+)/reviewers/attach/$',
+        name='document-reviewer-attach', view=APIDocumentReviewerAttachView.as_view()
     ),
     url(
-        regex=r'^documents/(?P<document_id>[0-9]+)/tags/remove/$',
-        name='document-tag-remove', view=APIDocumentTagRemoveView.as_view()
+        regex=r'^documents/(?P<document_id>[0-9]+)/reviewers/remove/$',
+        name='document-reviewer-remove', view=APIDocumentReviewerRemoveView.as_view()
     ),
 ]
