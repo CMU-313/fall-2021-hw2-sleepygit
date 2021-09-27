@@ -27,17 +27,17 @@ class ReviewerSerializer(serializers.HyperlinkedModelSerializer):
         model = Reviewer
 
 
-class DocumentTagAttachSerializer(serializers.Serializer):
-    tag = FilteredPrimaryKeyRelatedField(
+class DocumentReviewerAttachSerializer(serializers.Serializer):
+    reviewer = FilteredPrimaryKeyRelatedField(
         help_text=_(
-            'Primary key of the tag to add to the document.'
+            'Primary key of the reviewer to add to the document.'
         ), source_model=Reviewer, source_permission=permission_reviewer_attach
     )
 
 
-class DocumentTagRemoveSerializer(serializers.Serializer):
-    tag = FilteredPrimaryKeyRelatedField(
+class DocumentReviewerRemoveSerializer(serializers.Serializer):
+    reviewer = FilteredPrimaryKeyRelatedField(
         help_text=_(
-            'Primary key of the tag to remove from the document.'
+            'Primary key of the reviewer to remove from the document.'
         ), source_model=Reviewer, source_permission=permission_reviewer_remove
     )

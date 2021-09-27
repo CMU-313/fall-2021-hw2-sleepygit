@@ -3,7 +3,7 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('reviewers', '0006_documenttag'),
+        ('reviewers', '0006_documentreviewer'),
     ]
 
     operations = [
