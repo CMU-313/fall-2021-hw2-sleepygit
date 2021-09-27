@@ -60,10 +60,20 @@ link_tag_delete = Link(
     permissions=(permission_tag_delete,), tags='dangerous',
     text=_('Delete'), view='tags:tag_delete'
 )
+link_reviewer_delete = Link(
+    args='object.id', icon=icon_tag_delete,
+    permissions=(permission_tag_delete,), tags='dangerous',
+    text=_('Delete'), view='tags:reviewer_delete'
+)
 link_tag_edit = Link(
     args='object.id', icon=icon_tag_edit,
     permissions=(permission_tag_edit,), text=_('Edit'),
     view='tags:tag_edit'
+)
+link_reviewer_edit = Link(
+    args='object.id', icon=icon_tag_edit,
+    permissions=(permission_tag_edit,), text=_('Edit'),
+    view='tags:reviewer_edit'
 )
 link_tag_list = Link(
     condition=get_cascade_condition(
@@ -71,6 +81,13 @@ link_tag_list = Link(
         object_permission=permission_tag_view,
     ), icon=icon_tag_list,
     text=_('All'), view='tags:tag_list'
+)
+link_reviewer_list = Link(
+    condition=get_cascade_condition(
+        app_label='tags', model_name='Tag',
+        object_permission=permission_tag_view,
+    ), icon=icon_tag_list,
+    text=_('All'), view='tags:reviewer_list'
 )
 link_tag_multiple_delete = Link(
     icon=icon_tag_delete, permissions=(permission_tag_delete,),
