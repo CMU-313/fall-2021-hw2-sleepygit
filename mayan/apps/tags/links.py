@@ -50,6 +50,11 @@ link_tag_create = Link(
     icon=icon_tag_create, permissions=(permission_tag_create,),
     text=_('Create new tag'), view='tags:tag_create'
 )
+
+link_reviewer_create = Link(
+    icon=icon_tag_create, permissions=(permission_tag_create,),
+    text=_('Create new reviewer'), view='tags:reviewer_create'
+)
 link_tag_delete = Link(
     args='object.id', icon=icon_tag_delete,
     permissions=(permission_tag_delete,), tags='dangerous',
