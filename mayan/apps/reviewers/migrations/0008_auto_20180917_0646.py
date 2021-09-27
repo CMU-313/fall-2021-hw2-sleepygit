@@ -5,23 +5,23 @@ import colorful.fields
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0007_auto_20170118_1758'),
+        ('reviewers', '0007_auto_20170118_1758'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='tag',
+            model_name='reviewer',
             name='color',
             field=colorful.fields.RGBColorField(
-                help_text='The RGB color values for the tag.',
+                help_text='The RGB color values for the reviewer.',
                 verbose_name='Color'
             ),
         ),
         migrations.AlterField(
-            model_name='tag',
+            model_name='reviewer',
             name='label',
             field=models.CharField(
-                db_index=True, help_text='A short text used as the tag name.',
+                db_index=True, help_text='A short text used as the reviewer name.',
                 max_length=128, unique=True, verbose_name='Label'
             ),
         ),

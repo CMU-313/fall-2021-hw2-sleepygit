@@ -3,12 +3,12 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0002_tag_selection'),
+        ('reviewers', '0002_reviewer_selection'),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='tag',
+            model_name='reviewer',
             name='color',
         ),
     ]

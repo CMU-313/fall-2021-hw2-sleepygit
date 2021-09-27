@@ -5,12 +5,12 @@ import colorful.fields
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0004_auto_20150717_2336'),
+        ('reviewers', '0004_auto_20150717_2336'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='tag',
+            model_name='reviewer',
             name='color',
             field=colorful.fields.RGBColorField(verbose_name='Color'),
             preserve_default=True,

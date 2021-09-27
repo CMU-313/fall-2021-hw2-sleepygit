@@ -24,7 +24,7 @@ class AttachReviewerAction(WorkflowAction):
     }
     label = _('Attach reviewer')
     media = {
-        'js': ('tags/js/tags_form.js',)
+        'js': ('reviewers/js/reviewers_form.js',)
     }
     widgets = {
         'reviewers': {

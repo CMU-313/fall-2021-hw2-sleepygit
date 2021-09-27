@@ -11,9 +11,9 @@ def handler_index_document(sender, **kwargs):
             task_index_document.apply_async(kwargs={'document_id': pk})
 
 
-def handler_tag_pre_delete(sender, **kwargs):
+def handler_reviewer_pre_delete(sender, **kwargs):
     for document in kwargs['instance'].documents.all():
-        # Remove each of the documents from the tag
+        # Remove each of the documents from the reviewer
         # Trigger the m2m_changed signal for each document so they can be
         # reindexed
         kwargs['instance'].documents.remove(document)

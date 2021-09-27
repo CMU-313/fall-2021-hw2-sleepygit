@@ -3,15 +3,15 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0006_documenttag'),
+        ('reviewers', '0006_documenttag'),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='tag',
+            name='reviewer',
             options={
-                'ordering': ('label',), 'verbose_name': 'Tag',
-                'verbose_name_plural': 'Tags'
+                'ordering': ('label',), 'verbose_name': 'Reviewer',
+                'verbose_name_plural': 'Reviewers'
             },
         ),
     ]

@@ -3,12 +3,12 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0003_remove_tag_color'),
+        ('reviewers', '0003_remove_reviewer_color'),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='tag',
+            model_name='reviewer',
             old_name='selection',
             new_name='color',
         ),

@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Tag',
+            name='Reviewer',
             fields=[
                 (
                     'id', models.AutoField(
@@ -35,14 +35,14 @@ class Migration(migrations.Migration):
                 ),
                 (
                     'documents', models.ManyToManyField(
-                        related_name='tags', verbose_name='Documents',
+                        related_name='reviewers', verbose_name='Documents',
                         to='documents.Document'
                     )
                 ),
             ],
             options={
-                'verbose_name': 'Tag',
-                'verbose_name_plural': 'Tags',
+                'verbose_name': 'Reviewer',
+                'verbose_name_plural': 'Reviewers',
             },
             bases=(models.Model,),
         ),

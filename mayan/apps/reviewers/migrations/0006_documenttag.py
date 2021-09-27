@@ -3,19 +3,19 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0005_auto_20150718_0616'),
+        ('reviewers', '0005_auto_20150718_0616'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='DocumentTag',
+            name='DocumentReviewer',
             fields=[
             ],
             options={
-                'verbose_name': 'Document tag',
+                'verbose_name': 'Document reviewer',
                 'proxy': True,
-                'verbose_name_plural': 'Document tags',
+                'verbose_name_plural': 'Document reviewers',
             },
-            bases=('tags.tag',),
+            bases=('reviewers.reviewer',),
         ),
     ]

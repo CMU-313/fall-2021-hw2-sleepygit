@@ -29,21 +29,21 @@ RGB_VALUES = {
 
 
 def operation_convert_color_names_to_rgb(apps, schema_editor):
-    Tag = apps.get_model(app_label='tags', model_name='Tag')
+    Reviewer = apps.get_model(app_label='reviewers', model_name='Reviewer')
 
-    for tag in Tag.objects.using(alias=schema_editor.connection.alias).all():
-        tag.selection = RGB_VALUES[tag.color]
-        tag.save()
+    for reviewer in Reviewer.objects.using(alias=schema_editor.connection.alias).all():
+        reviewer.selection = RGB_VALUES[reviewer.color]
+        reviewer.save()
 
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('tags', '0001_initial'),
+        ('reviewers', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='tag',
+            model_name='reviewer',
             name='selection',
             field=colorful.fields.RGBColorField(default='#FFFFFF'),
             preserve_default=False,

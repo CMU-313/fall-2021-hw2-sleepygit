@@ -7,7 +7,7 @@ from .widgets import ReviewerFormWidget
 
 class ReviewerMultipleSelectionForm(FilteredSelectionForm):
     class Media:
-        js = ('tags/js/tags_form.js',)
+        js = ('reviewers/js/reviewers_form.js',)
 
     class Meta:
         allow_multiple = True
