@@ -40,7 +40,7 @@ document_version_page_search.add_model_field(
 
 tag_search = SearchModel(
     app_label='tags', model_name='Tag',
-    permission=permission_tag_view,
+    permission=permission_reviewer_view,
     serializer_path='mayan.apps.tags.serializers.TagSerializer'
 )
 tag_search.add_model_field(field='label')

@@ -37,7 +37,7 @@ urlpatterns = [
     url(
         regex=r'^documents/multiple/tags/multiple/attach/$',
         name='multiple_documents_tag_attach',
-        view=TagAttachActionView.as_view()
+        view=ReviewerAttachActionView.as_view()
     ),
     url(
         regex=r'^documents/multiple/reviewers/multiple/add/$',

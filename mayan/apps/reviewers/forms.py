@@ -15,4 +15,4 @@ class ReviewerMultipleSelectionForm(FilteredSelectionForm):
         label = _('Reviewers')
         required = False
         widget_class = ReviewerFormWidget
-        widget_attributes = {'class': 'select2-tags'}
+        widget_attributes = {'class': 'select2-reviewers'}

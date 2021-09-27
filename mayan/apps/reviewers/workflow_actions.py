@@ -29,7 +29,7 @@ class AttachReviewerAction(WorkflowAction):
     widgets = {
         'reviewers': {
             'class': 'mayan.apps.reviewers.widgets.ReviewerFormWidget', 'kwargs': {
-                'attrs': {'class': 'select2-tags'},
+                'attrs': {'class': 'select2-reviewers'},
             }
         }
     }
