@@ -38,10 +38,10 @@ document_version_page_search.add_model_field(
 
 # Tag
 
-tag_search = SearchModel(
-    app_label='tags', model_name='Tag',
+reviewer_search = SearchModel(
+    app_label='reviewers', model_name='Reviewer',
     permission=permission_reviewer_view,
-    serializer_path='mayan.apps.tags.serializers.TagSerializer'
+    serializer_path='mayan.apps.reviewers.serializers.ReviewerSerializer'
 )
-tag_search.add_model_field(field='label')
-tag_search.add_model_field(field='color')
+reviewer_search.add_model_field(field='label')
+reviewer_search.add_model_field(field='color')
