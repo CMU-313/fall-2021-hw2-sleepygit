@@ -15,6 +15,7 @@ class ReviewerMultipleSelectionForm(FilteredSelectionForm):
         label = _('Reviewers')
         required = False
         widget_class = ReviewerFormWidget
+<<<<<<< HEAD
         widget_attributes = {'class': 'select2-reviewers'}
 
 class ReviewerMultipleSelectionForm(FilteredSelectionForm):
@@ -28,3 +29,6 @@ class ReviewerMultipleSelectionForm(FilteredSelectionForm):
         required = False
         widget_class = ReviewerFormWidget
         widget_attributes = {'class': 'select2-reviewers'}
+=======
+        widget_attributes = {'class': 'select2-reviewers'}
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7

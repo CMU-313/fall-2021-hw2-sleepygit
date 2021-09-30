@@ -29,7 +29,11 @@ msgstr ""
 #: events.py:5 forms.py:15 links.py:27 menus.py:14 models.py:41
 #: permissions.py:5 search.py:13 views.py:183 workflow_actions.py:18
 #: workflow_actions.py:61
+<<<<<<< HEAD
 msgid "Reviewers"
+=======
+msgid "Tags"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes"
 
 #: apps.py:151 models.py:35
@@ -37,6 +41,7 @@ msgid "Documents"
 msgstr "Documents"
 
 #: events.py:8
+<<<<<<< HEAD
 msgid "Reviewer attached to document"
 msgstr "Étiquette attachée au document"
 
@@ -66,6 +71,37 @@ msgstr "Retirer des étiquettes"
 
 #: links.py:43
 msgid "Create new reviewer"
+=======
+msgid "Tag attached to document"
+msgstr "Étiquette attachée au document"
+
+#: events.py:11
+msgid "Tag created"
+msgstr "Étiquette créée"
+
+#: events.py:14
+msgid "Tag edited"
+msgstr "Étiquette modifiée"
+
+#: events.py:17
+msgid "Tag removed from document"
+msgstr "Étiquette retirée du document"
+
+#: links.py:18 links.py:37
+msgid "Attach tags"
+msgstr "Attacher des étiquettes"
+
+#: links.py:22 workflow_actions.py:68
+msgid "Remove tag"
+msgstr "Retirer une étiquette"
+
+#: links.py:32
+msgid "Remove tags"
+msgstr "Retirer des étiquettes"
+
+#: links.py:43
+msgid "Create new tag"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Nouvelle étiquette"
 
 #: links.py:48 links.py:64
@@ -81,6 +117,7 @@ msgid "All"
 msgstr "Tout"
 
 #: methods.py:18
+<<<<<<< HEAD
 msgid "Return the reviewers attached to the document."
 msgstr "Renvoie les étiquettes attachées au document."
 
@@ -90,6 +127,17 @@ msgstr "get_reviewers()"
 
 #: models.py:27
 msgid "A short text used as the reviewer name."
+=======
+msgid "Return the tags attached to the document."
+msgstr "Renvoie les étiquettes attachées au document."
+
+#: methods.py:20
+msgid "get_tags()"
+msgstr "get_tags()"
+
+#: models.py:27
+msgid "A short text used as the tag name."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Un court texte utilisé comme nom pour l'étiquette."
 
 #: models.py:28
@@ -97,7 +145,11 @@ msgid "Label"
 msgstr "Étiquette"
 
 #: models.py:31
+<<<<<<< HEAD
 msgid "The RGB color values for the reviewer."
+=======
+msgid "The RGB color values for the tag."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "La couleur RVB pour cette étiquette."
 
 #: models.py:32
@@ -105,7 +157,11 @@ msgid "Color"
 msgstr "Couleur"
 
 #: models.py:40
+<<<<<<< HEAD
 msgid "Reviewer"
+=======
+msgid "Tag"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquette"
 
 #: models.py:83
@@ -113,6 +169,7 @@ msgid "Preview"
 msgstr "Prévisualiser"
 
 #: models.py:112
+<<<<<<< HEAD
 msgid "Document reviewer"
 msgstr "Étiquette de document"
 
@@ -150,36 +207,99 @@ msgstr "Clé primaire de l'étiquette à attacher au document."
 
 #: serializers.py:41
 msgid "Primary key of the reviewer to remove from the document."
+=======
+msgid "Document tag"
+msgstr "Étiquette de document"
+
+#: models.py:113 search.py:18 search.py:24 search.py:30 search.py:36
+msgid "Document tags"
+msgstr "Étiquettes de document"
+
+#: permissions.py:8
+msgid "Create new tags"
+msgstr "Créer des étiquettes"
+
+#: permissions.py:11
+msgid "Delete tags"
+msgstr "Supprimer des étiquettes"
+
+#: permissions.py:14
+msgid "View tags"
+msgstr "Afficher les étiquettes"
+
+#: permissions.py:17
+msgid "Edit tags"
+msgstr "Modifier des étiquettes"
+
+#: permissions.py:20
+msgid "Attach tags to documents"
+msgstr "Attacher des étiquettes aux documents"
+
+#: permissions.py:23
+msgid "Remove tags from documents"
+msgstr "Retirer des étiquettes des documents"
+
+#: serializers.py:33
+msgid "Primary key of the tag to add to the document."
+msgstr "Clé primaire de l'étiquette à attacher au document."
+
+#: serializers.py:41
+msgid "Primary key of the tag to remove from the document."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Clé primaire de l'étiquette à supprimer du document."
 
 #: views.py:36
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers attached to document \"%(object)s\" successfully."
+=======
+msgid "Tags attached to document \"%(object)s\" successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes attachées avec succès au document \"%(object)s\"."
 
 #: views.py:39
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers attached to %(count)d document successfully."
+=======
+msgid "Tags attached to %(count)d document successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes attachées avec succès au document %(count)d."
 
 #: views.py:42
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers attached to %(count)d documents successfully."
+=======
+msgid "Tags attached to %(count)d documents successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes attachées avec succès à %(count)d documents."
 
 #: views.py:44
 #, python-format
+<<<<<<< HEAD
 msgid "Attach reviewers to document: %(object)s"
+=======
+msgid "Attach tags to document: %(object)s"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Attacher les étiquettes au document: %(object)s"
 
 #: views.py:45
 #, python-format
+<<<<<<< HEAD
 msgid "Attach reviewers to %(count)d document."
+=======
+msgid "Attach tags to %(count)d document."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Attacher les étiquettes à %(count)d document."
 
 #: views.py:46
 #, python-format
+<<<<<<< HEAD
 msgid "Attach reviewers to %(count)d documents."
+=======
+msgid "Attach tags to %(count)d documents."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Attacher des étiquettes à %(count)d documents."
 
 #: views.py:50
@@ -187,47 +307,83 @@ msgid "Attach"
 msgstr "Attacher"
 
 #: views.py:64 wizard_steps.py:27
+<<<<<<< HEAD
 msgid "Reviewers to be attached."
 msgstr "Étiquettes à attacher."
 
 #: views.py:103
 msgid "Create reviewer"
+=======
+msgid "Tags to be attached."
+msgstr "Étiquettes à attacher."
+
+#: views.py:103
+msgid "Create tag"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Créer une étiquette"
 
 #: views.py:116
 #, python-format
+<<<<<<< HEAD
 msgid "Error deleting reviewer \"%(instance)s\"; %(exception)s"
+=======
+msgid "Error deleting tag \"%(instance)s\"; %(exception)s"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr ""
 "Erreur lors de la suppression de l'étiquette \"%(instance)s\"; %(exception)s"
 
 #: views.py:121
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewer \"%(object)s\" deleted successfully."
+=======
+msgid "Tag \"%(object)s\" deleted successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "L'étiquette \"%(object)s\" a bien été supprimée."
 
 #: views.py:122
 #, python-format
+<<<<<<< HEAD
 msgid "%(count)d reviewer deleted successfully."
+=======
+msgid "%(count)d tag deleted successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "%(count)d étiquette supprimée avec succès."
 
 #: views.py:123
 #, python-format
+<<<<<<< HEAD
 msgid "%(count)d reviewers deleted successfully."
+=======
+msgid "%(count)d tags deleted successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr " %(count)d étiquettes ont été supprimées avec succès."
 
 #: views.py:124
 #, python-format
+<<<<<<< HEAD
 msgid "Delete reviewer: %(object)s."
+=======
+msgid "Delete tag: %(object)s."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Supprimer l'étiquette: %(object)s."
 
 #: views.py:125
 #, python-format
+<<<<<<< HEAD
 msgid "Delete the %(count)d selected reviewer."
+=======
+msgid "Delete the %(count)d selected tag."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Supprimez %(count)d étiquette sélectionnée."
 
 #: views.py:126
 #, python-format
+<<<<<<< HEAD
 msgid "Delete the %(count)d selected reviewers."
+=======
+msgid "Delete the %(count)d selected tags."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Supprimez les %(count)d étiquettes sélectionnées."
 
 #: views.py:131
@@ -236,63 +392,111 @@ msgstr "Sera retirée de tous les documents."
 
 #: views.py:157
 #, python-format
+<<<<<<< HEAD
 msgid "Edit reviewer: %s"
+=======
+msgid "Edit tag: %s"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Modifier l'étiquette : %s"
 
 #: views.py:179
 msgid ""
+<<<<<<< HEAD
 "Reviewers are color coded properties that can be attached or removed from "
+=======
+"Tags are color coded properties that can be attached or removed from "
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 "documents."
 msgstr ""
 "Les étiquettes sont des propriétés, avec un code de couleur, pouvant être "
 "attachées ou supprimées à des documents."
 
 #: views.py:182
+<<<<<<< HEAD
 msgid "No reviewers available"
+=======
+msgid "No tags available"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Aucune étiquette disponible"
 
 #: views.py:211
 #, python-format
+<<<<<<< HEAD
 msgid "Documents with the reviewer: %s"
 msgstr "Documents avec l'étiquette : %s"
 
 #: views.py:236
 msgid "Document has no reviewers attached"
+=======
+msgid "Documents with the tag: %s"
+msgstr "Documents avec l'étiquette : %s"
+
+#: views.py:236
+msgid "Document has no tags attached"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Le document n'a pas d'étiquette attachée"
 
 #: views.py:239
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers for document: %s"
+=======
+msgid "Tags for document: %s"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes du document : %s"
 
 #: views.py:257
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers removed from document \"%(object)s\" successfully."
+=======
+msgid "Tags removed from document \"%(object)s\" successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes supprimées avec succès du document \"%(object)s\"."
 
 #: views.py:260
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers removed from %(count)d document successfully."
+=======
+msgid "Tags removed from %(count)d document successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes supprimées avec succès pour %(count)d document."
 
 #: views.py:263
 #, python-format
+<<<<<<< HEAD
 msgid "Reviewers removed from %(count)d documents successfully."
+=======
+msgid "Tags removed from %(count)d documents successfully."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes supprimées avec succès pour %(count)d documents."
 
 #: views.py:265
 #, python-format
+<<<<<<< HEAD
 msgid "Remove reviewers from document: %(object)s"
+=======
+msgid "Remove tags from document: %(object)s"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Supprimer les étiquettes du document: %(object)s"
 
 #: views.py:266
 #, python-format
+<<<<<<< HEAD
 msgid "Remove reviewers from %(count)d document."
+=======
+msgid "Remove tags from %(count)d document."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Supprimez les étiquettes de %(count)d document."
 
 #: views.py:267
 #, python-format
+<<<<<<< HEAD
 msgid "Remove reviewers from %(count)d documents."
+=======
+msgid "Remove tags from %(count)d documents."
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Supprimez les étiquettes pour %(count)d documents."
 
 #: views.py:272
@@ -300,6 +504,7 @@ msgid "Remove"
 msgstr "Retirer"
 
 #: views.py:286
+<<<<<<< HEAD
 msgid "Reviewers to be removed."
 msgstr "Étiquettes qui seront retirées."
 
@@ -317,4 +522,23 @@ msgstr "Attacher une étiquette"
 
 #: workflow_actions.py:63
 msgid "Reviewers to remove from the document"
+=======
+msgid "Tags to be removed."
+msgstr "Étiquettes qui seront retirées."
+
+#: wizard_steps.py:15
+msgid "Select tags"
+msgstr "Sélectionner les étiquettes"
+
+#: workflow_actions.py:20
+msgid "Tags to attach to the document"
+msgstr "Étiquettes à attacher au document"
+
+#: workflow_actions.py:25
+msgid "Attach tag"
+msgstr "Attacher une étiquette"
+
+#: workflow_actions.py:63
+msgid "Tags to remove from the document"
+>>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Étiquettes à retirer du document"
