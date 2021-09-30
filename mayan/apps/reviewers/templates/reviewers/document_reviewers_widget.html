@@ -1,0 +1,5 @@
+<div class="reviewer-container">
+    {% for reviewer in reviewers %}
+        {% include 'reviewers/reviewer_widget.html' with reviewer=reviewer %}
+    {% endfor %}
+</div>
