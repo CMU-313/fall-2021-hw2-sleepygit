@@ -36,11 +36,7 @@ document_version_page_search.add_model_field(
     field='document_version__document__reviewers__label', label=_('Document reviewers')
 )
 
-<<<<<<< HEAD
 # Reviewer
-=======
-# Tag
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 
 reviewer_search = SearchModel(
     app_label='reviewers', model_name='Reviewer',

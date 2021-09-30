@@ -26,21 +26,12 @@ from .links import (
     link_document_reviewer_list, link_document_multiple_reviewer_multiple_attach,
     link_document_multiple_reviewer_multiple_remove,
     link_document_reviewer_multiple_remove, link_document_reviewer_multiple_attach, link_reviewer_create,
-<<<<<<< HEAD
     link_reviewer_delete, link_reviewer_delete, link_reviewer_edit, link_reviewer_edit, link_reviewer_list, 
     link_reviewer_create, link_reviewer_list, link_reviewer_multiple_delete, link_reviewer_document_list,
     link_document_multiple_reviewer_multiple_add, 
     link_document_multiple_reviewer_multiple_remove
 )
 from .menus import menu_reviewers, menu_reviewers
-=======
-    link_reviewer_delete, link_reviewer_edit, link_reviewer_list,
-    link_reviewer_multiple_delete, link_reviewer_document_list,
-    link_document_multiple_reviewer_multiple_add,
-    link_document_multiple_reviewer_multiple_remove
-)
-from .menus import menu_reviewers
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 from .methods import method_document_get_reviewers
 from .permissions import (
     permission_reviewer_attach, permission_reviewer_delete, permission_reviewer_edit,
@@ -183,11 +174,8 @@ class ReviewersApp(MayanAppConfig):
 
         menu_multi_item.bind_links(
             links=(
-<<<<<<< HEAD
                 link_document_multiple_reviewer_multiple_attach,
                 link_document_multiple_reviewer_multiple_remove,
-=======
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
                 link_document_multiple_reviewer_multiple_add,
                 link_document_multiple_reviewer_multiple_remove
             ),
@@ -196,15 +184,12 @@ class ReviewersApp(MayanAppConfig):
         menu_multi_item.bind_links(
             links=(link_reviewer_multiple_delete,), sources=(Reviewer,)
         )
-<<<<<<< HEAD
         # menu_object.bind_links(
         #     links=(
         #         link_reviewer_edit, link_reviewer_delete
         #     ),
         #     sources=(Reviewer,)
         # )
-=======
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
         menu_object.bind_links(
             links=(
                 link_reviewer_edit, link_reviewer_delete

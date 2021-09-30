@@ -61,11 +61,7 @@ class APIReviewerDocumentListView(
     ExternalObjectAPIViewMixin, generics.ListAPIView
 ):
     """
-<<<<<<< HEAD
-    get: Returns a list of all the documents reviewerged by a particular reviewer.
-=======
     get: Returns a list of all the documents tagged by a particular reviewer.
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
     """
     external_object_class = Reviewer
     external_object_pk_url_kwarg = 'reviewer_id'

@@ -15,7 +15,6 @@ from mayan.apps.views.generics import (
 )
 from mayan.apps.views.mixins import ExternalObjectViewMixin
 
-<<<<<<< HEAD
 from .forms import ReviewerMultipleSelectionForm, ReviewerMultipleSelectionForm
 from .icons import icon_menu_reviewers, icon_document_reviewer_remove_submit
 from .links import link_document_reviewer_multiple_attach, link_reviewer_create
@@ -23,15 +22,6 @@ from .models import DocumentReviewer, Reviewer
 from .permissions import (
     permission_reviewer_attach, permission_reviewer_create, permission_reviewer_delete,
     permission_reviewer_edit, permission_reviewer_remove, permission_reviewer_view
-=======
-from .forms import ReviewerMultipleSelectionForm
-from .icons import icon_menu_tags, icon_document_tag_remove_submit
-from .links import link_document_reviewer_multiple_attach, link_reviewer_create
-from .models import DocumentReviewer, Reviewer
-from .permissions import (
-    permission_reviewer_attach, permission_reviewer_create, permission_reviewer_remove,
-    permission_reviewer_view, permission_reviewer_delete, permission_reviewer_edit,
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 )
 
 logger = logging.getLogger(name=__name__)
@@ -51,11 +41,7 @@ class ReviewerAttachActionView(MultipleObjectFormActionView):
     success_message_plural = _(
         'Reviewers attached to %(count)d documents successfully.'
     )
-<<<<<<< HEAD
     title_single = _('Attach reviewers to document: %(object)s')
-=======
-    title_single = _('Attach reviwers to document: %(object)s')
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
     title_singular = _('Attach reviewers to %(count)d document.')
     title_plural = _('Attach reviewers to %(count)d documents.')
 
@@ -112,90 +98,12 @@ class ReviewerAttachActionView(MultipleObjectFormActionView):
             reviewer._event_actor = self.request.user
             reviewer.attach_to(document=instance)
 
-<<<<<<< HEAD
-=======
-class ReviewerAddActionView(MultipleObjectFormActionView):
-    form_class = ReviewerMultipleSelectionForm
-    object_permission = permission_reviewer_attach
-    pk_url_kwarg = 'document_id'
-    source_queryset = Document.valid
-    success_message_single = _(
-        'Reviewers added to application document "%(object)s" successfully.'
-    )
-    success_message_singular = _(
-        'Reviewers added to %(count)d application document successfully.'
-    )
-    success_message_plural = _(
-        'Reviewers added to %(count)d application documents successfully.'
-    )
-    title_single = _('Add reviewers to application document: %(object)s')
-    title_singular = _('Add reviewers to %(count)d application document.')
-    title_plural = _('Add reviewers to %(count)d application documents.')
-
-    def get_extra_context(self):
-        context = {
-            'submit_label': _('Add'),
-        }
-
-        if self.object_list.count() == 1:
-            context.update(
-                {
-                    'object': self.object_list.first(),
-                }
-            )
-
-        return context
-
-    def get_form_extra_kwargs(self):
-        kwargs = {
-            'help_text': _('Reviewers to be added.'),
-            'permission': permission_reviewer_attach,
-            'queryset': Reviewer.objects.all(),
-            'user': self.request.user
-        }
-
-        if self.object_list.count() == 1:
-            kwargs.update(
-                {
-                    'queryset': Reviewer.objects.exclude(
-                        pk__in=self.object_list.first().reviewer.all()
-                    )
-                }
-            )
-
-        return kwargs
-
-    def get_post_action_redirect(self):
-        if self.object_list.count() == 1:
-            return reverse(
-                viewname='reviewers:document_reviewer_list', kwargs={
-                    'document_id': self.object_list.first().pk
-                }
-            )
-        else:
-            return super().get_post_action_redirect()
-
-    def object_action(self, form, instance):
-        for reviewer in form.cleaned_data['reviewers']:
-            AccessControlList.objects.check_access(
-                obj=reviewer, permissions=(permission_reviewer_attach,),
-                user=self.request.user
-            )
-
-            reviewer._event_actor = self.request.user
-            reviewer.attach_to(document=instance)
-
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 
 class ReviewerCreateView(SingleObjectCreateView):
     extra_context = {'title': _('Create reviewer')}
     fields = ('label', 'color')
     model = Reviewer
-<<<<<<< HEAD
     post_action_redirect = reverse_lazy(viewname='reviewers:reviewer_list')
-=======
-    post_action_redirect = reverse_lazy(viewname='reviewer:reviewer_list')
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
     view_permission = permission_reviewer_create
 
     def get_instance_extra_data(self):
@@ -220,11 +128,7 @@ class ReviewerDeleteActionView(MultipleObjectConfirmActionView):
     def get_extra_context(self):
         context = {
             'delete_view': True,
-<<<<<<< HEAD
             'message': _('Will be removed from all documents.'),
-=======
-            'message': _('Will be removed from all application documents.'),
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
         }
 
         if self.object_list.count() == 1:
@@ -267,22 +171,13 @@ class ReviewerListView(SingleObjectListView):
         return {
             'hide_link': True,
             'hide_object': True,
-<<<<<<< HEAD
             'no_results_icon': icon_menu_reviewers,
-=======
-            'no_results_icon': icon_menu_tags,
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
             'no_results_main_link': link_reviewer_create.resolve(
                 context=RequestContext(request=self.request)
             ),
             'no_results_text': _(
-<<<<<<< HEAD
                 'Reviewers are color coded properties that can be attached or '
                 'removed from documents.'
-=======
-                'Reviewers are users that can be added or '
-                'removed from application documents.'
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
             ),
             'no_results_title': _('No reviewers available'),
             'title': _('Reviewers'),
@@ -313,11 +208,7 @@ class ReviewerDocumentListView(ExternalObjectViewMixin, DocumentListView):
         context.update(
             {
                 'object': self.get_reviewer(),
-<<<<<<< HEAD
                 'title': _('Documents with the reviewer: %s') % self.get_reviewer(),
-=======
-                'title': _('Application documents with the reviewer: %s') % self.get_reviewer(),
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
             }
         )
         return context
@@ -342,17 +233,10 @@ class DocumentReviewerListView(ExternalObjectViewMixin, ReviewerListView):
                         self.request, {'object': self.external_object}
                     )
                 ),
-<<<<<<< HEAD
                 'no_results_title': _('Document has no reviewers attached'),
                 'object': self.external_object,
                 'title': _(
                     'Reviewers for document: %s'
-=======
-                'no_results_title': _('Application document has no reviewers added'),
-                'object': self.external_object,
-                'title': _(
-                    'Reviewers for application document: %s'
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
                 ) % self.external_object,
             }
         )
@@ -370,7 +254,6 @@ class ReviewerRemoveActionView(MultipleObjectFormActionView):
     pk_url_kwarg = 'document_id'
     source_queryset = Document.valid
     success_message_single = _(
-<<<<<<< HEAD
         'Reviewers removed from document "%(object)s" successfully.'
     )
     success_message_singular = _(
@@ -386,23 +269,6 @@ class ReviewerRemoveActionView(MultipleObjectFormActionView):
     def get_extra_context(self):
         context = {
             'submit_icon': icon_document_reviewer_remove_submit,
-=======
-        'Reviewers removed from application document "%(object)s" successfully.'
-    )
-    success_message_singular = _(
-        'Reviewers removed from %(count)d application document successfully.'
-    )
-    success_message_plural = _(
-        'Reviewers removed from %(count)d application documents successfully.'
-    )
-    title_single = _('Remove reviewers from application document: %(object)s')
-    title_singular = _('Remove reviewers from %(count)d application document.')
-    title_plural = _('Remove reviewers from %(count)d application documents.')
-
-    def get_extra_context(self):
-        context = {
-            'submit_icon': icon_document_tag_remove_submit,
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
             'submit_label': _('Remove'),
         }
 
@@ -451,7 +317,6 @@ class ReviewerRemoveActionView(MultipleObjectFormActionView):
 
             reviewer._event_actor = self.request.user
             reviewer.remove_from(document=instance)
-<<<<<<< HEAD
 
 class ReviewerAddActionView(MultipleObjectFormActionView):
     form_class = ReviewerMultipleSelectionForm
@@ -523,5 +388,3 @@ class ReviewerAddActionView(MultipleObjectFormActionView):
 
             reviewer._event_actor = self.request.user
             reviewer.attach_to(document=instance)
-=======
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7

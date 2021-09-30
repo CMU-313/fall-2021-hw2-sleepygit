@@ -27,11 +27,7 @@ msgstr ""
 #: events.py:5 forms.py:15 links.py:27 menus.py:14 models.py:41
 #: permissions.py:5 search.py:13 views.py:183 workflow_actions.py:18
 #: workflow_actions.py:61
-<<<<<<< HEAD
 msgid "Reviewers"
-=======
-msgid "Tags"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркери"
 
 #: apps.py:151 models.py:35
@@ -39,7 +35,6 @@ msgid "Documents"
 msgstr "Документи"
 
 #: events.py:8
-<<<<<<< HEAD
 msgid "Reviewer attached to document"
 msgstr "Маркер е прикачен към документа"
 
@@ -69,37 +64,6 @@ msgstr "Премахване на маркери"
 
 #: links.py:43
 msgid "Create new reviewer"
-=======
-msgid "Tag attached to document"
-msgstr "Маркер е прикачен към документа"
-
-#: events.py:11
-msgid "Tag created"
-msgstr "Маркерът е създаден"
-
-#: events.py:14
-msgid "Tag edited"
-msgstr "Маркерът е редактиран"
-
-#: events.py:17
-msgid "Tag removed from document"
-msgstr "Маркерът е премахнат от документа"
-
-#: links.py:18 links.py:37
-msgid "Attach tags"
-msgstr "Прикачване на маркери"
-
-#: links.py:22 workflow_actions.py:68
-msgid "Remove tag"
-msgstr "Премахване на маркер"
-
-#: links.py:32
-msgid "Remove tags"
-msgstr "Премахване на маркери"
-
-#: links.py:43
-msgid "Create new tag"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Създаване на нов маркер"
 
 #: links.py:48 links.py:64
@@ -115,7 +79,6 @@ msgid "All"
 msgstr "Всичко"
 
 #: methods.py:18
-<<<<<<< HEAD
 msgid "Return the reviewers attached to the document."
 msgstr "Връща маркерите, прикачени към документа."
 
@@ -125,17 +88,6 @@ msgstr "get_reviewers()"
 
 #: models.py:27
 msgid "A short text used as the reviewer name."
-=======
-msgid "Return the tags attached to the document."
-msgstr "Връща маркерите, прикачени към документа."
-
-#: methods.py:20
-msgid "get_tags()"
-msgstr "get_tags()"
-
-#: models.py:27
-msgid "A short text used as the tag name."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Кратък текст, използван като име на маркера."
 
 #: models.py:28
@@ -143,11 +95,7 @@ msgid "Label"
 msgstr "Етикет"
 
 #: models.py:31
-<<<<<<< HEAD
 msgid "The RGB color values for the reviewer."
-=======
-msgid "The RGB color values for the tag."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "RGB стойностите на цвета за маркера."
 
 #: models.py:32
@@ -155,11 +103,7 @@ msgid "Color"
 msgstr "Цвят"
 
 #: models.py:40
-<<<<<<< HEAD
 msgid "Reviewer"
-=======
-msgid "Tag"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркер"
 
 #: models.py:83
@@ -167,7 +111,6 @@ msgid "Preview"
 msgstr "Предварителен преглед"
 
 #: models.py:112
-<<<<<<< HEAD
 msgid "Document reviewer"
 msgstr "Маркер на документ"
 
@@ -205,99 +148,36 @@ msgstr "Основен ключ на маркера, който да добав�
 
 #: serializers.py:41
 msgid "Primary key of the reviewer to remove from the document."
-=======
-msgid "Document tag"
-msgstr "Маркер на документ"
-
-#: models.py:113 search.py:18 search.py:24 search.py:30 search.py:36
-msgid "Document tags"
-msgstr "Маркери на документи"
-
-#: permissions.py:8
-msgid "Create new tags"
-msgstr "Създаване на нови маркери"
-
-#: permissions.py:11
-msgid "Delete tags"
-msgstr "Изтриване на маркери"
-
-#: permissions.py:14
-msgid "View tags"
-msgstr "Преглед на маркери"
-
-#: permissions.py:17
-msgid "Edit tags"
-msgstr "Редактиране на маркери"
-
-#: permissions.py:20
-msgid "Attach tags to documents"
-msgstr "Закачане на маркер към документи"
-
-#: permissions.py:23
-msgid "Remove tags from documents"
-msgstr "Премахване на маркери от документи"
-
-#: serializers.py:33
-msgid "Primary key of the tag to add to the document."
-msgstr "Основен ключ на маркера, който да добавите към документа."
-
-#: serializers.py:41
-msgid "Primary key of the tag to remove from the document."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Основен ключ на маркера, който да се премахне от документа."
 
 #: views.py:36
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers attached to document \"%(object)s\" successfully."
-=======
-msgid "Tags attached to document \"%(object)s\" successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерите са прикачени към документ &quot;%(object)s&quot; успешно."
 
 #: views.py:39
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers attached to %(count)d document successfully."
-=======
-msgid "Tags attached to %(count)d document successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерите са прикачени към %(count)d документ успешно."
 
 #: views.py:42
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers attached to %(count)d documents successfully."
-=======
-msgid "Tags attached to %(count)d documents successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерите са прикачени към %(count)d документа успешно."
 
 #: views.py:44
 #, python-format
-<<<<<<< HEAD
 msgid "Attach reviewers to document: %(object)s"
-=======
-msgid "Attach tags to document: %(object)s"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Прикачете маркери към документ: %(object)s"
 
 #: views.py:45
 #, python-format
-<<<<<<< HEAD
 msgid "Attach reviewers to %(count)d document."
-=======
-msgid "Attach tags to %(count)d document."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Прикачете маркери към %(count)dдокумент."
 
 #: views.py:46
 #, python-format
-<<<<<<< HEAD
 msgid "Attach reviewers to %(count)d documents."
-=======
-msgid "Attach tags to %(count)d documents."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Прикачете маркери към %(count)dдокументи."
 
 #: views.py:50
@@ -305,82 +185,46 @@ msgid "Attach"
 msgstr "Прикачете"
 
 #: views.py:64 wizard_steps.py:27
-<<<<<<< HEAD
 msgid "Reviewers to be attached."
 msgstr "Маркери за прикачване."
 
 #: views.py:103
 msgid "Create reviewer"
-=======
-msgid "Tags to be attached."
-msgstr "Маркери за прикачване."
-
-#: views.py:103
-msgid "Create tag"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Създаване на маркер"
 
 #: views.py:116
 #, python-format
-<<<<<<< HEAD
 msgid "Error deleting reviewer \"%(instance)s\"; %(exception)s"
-=======
-msgid "Error deleting tag \"%(instance)s\"; %(exception)s"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Грешка при изтриване на маркер „%(instance)s“; %(exception)s"
 
 #: views.py:121
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewer \"%(object)s\" deleted successfully."
-=======
-msgid "Tag \"%(object)s\" deleted successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерът &quot;%(object)s&quot; беше изтрит успешно."
 
 #: views.py:122
 #, python-format
-<<<<<<< HEAD
 msgid "%(count)d reviewer deleted successfully."
-=======
-msgid "%(count)d tag deleted successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "%(count)d маркер е изтрит успешно."
 
 #: views.py:123
 #, python-format
-<<<<<<< HEAD
 msgid "%(count)d reviewers deleted successfully."
-=======
-msgid "%(count)d tags deleted successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "%(count)d маркера бяха изтрити успешно."
 
 #: views.py:124
 #, python-format
-<<<<<<< HEAD
 msgid "Delete reviewer: %(object)s."
-=======
-msgid "Delete tag: %(object)s."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Изтриване на маркер: %(object)s."
 
 #: views.py:125
 #, python-format
-<<<<<<< HEAD
 msgid "Delete the %(count)d selected reviewer."
-=======
-msgid "Delete the %(count)d selected tag."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Изтрийте %(count)dизбран маркер."
 
 #: views.py:126
 #, python-format
-<<<<<<< HEAD
 msgid "Delete the %(count)d selected reviewers."
-=======
-msgid "Delete the %(count)d selected tags."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Изтрийте %(count)dизбрани маркера."
 
 #: views.py:131
@@ -389,111 +233,63 @@ msgstr "Ще бъде премахнат от всички документи."
 
 #: views.py:157
 #, python-format
-<<<<<<< HEAD
 msgid "Edit reviewer: %s"
-=======
-msgid "Edit tag: %s"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Редактиране на маркер: %s"
 
 #: views.py:179
 msgid ""
-<<<<<<< HEAD
 "Reviewers are color coded properties that can be attached or removed from "
-=======
-"Tags are color coded properties that can be attached or removed from "
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 "documents."
 msgstr ""
 "Маркерите са цветно кодирани свойства, които могат да бъдат прикачени или "
 "премахнати от документите."
 
 #: views.py:182
-<<<<<<< HEAD
 msgid "No reviewers available"
-=======
-msgid "No tags available"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Няма налични маркери"
 
 #: views.py:211
 #, python-format
-<<<<<<< HEAD
 msgid "Documents with the reviewer: %s"
 msgstr "Документи с маркер: %s"
 
 #: views.py:236
 msgid "Document has no reviewers attached"
-=======
-msgid "Documents with the tag: %s"
-msgstr "Документи с маркер: %s"
-
-#: views.py:236
-msgid "Document has no tags attached"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Документът няма прикачени маркери"
 
 #: views.py:239
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers for document: %s"
-=======
-msgid "Tags for document: %s"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркери за документ: %s"
 
 #: views.py:257
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers removed from document \"%(object)s\" successfully."
-=======
-msgid "Tags removed from document \"%(object)s\" successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерите бяха премахнати от документ „%(object)s“ успешно."
 
 #: views.py:260
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers removed from %(count)d document successfully."
-=======
-msgid "Tags removed from %(count)d document successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерите са премахнати от %(count)d документ успешно."
 
 #: views.py:263
 #, python-format
-<<<<<<< HEAD
 msgid "Reviewers removed from %(count)d documents successfully."
-=======
-msgid "Tags removed from %(count)d documents successfully."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркерите са премахнати от %(count)d документа успешно."
 
 #: views.py:265
 #, python-format
-<<<<<<< HEAD
 msgid "Remove reviewers from document: %(object)s"
-=======
-msgid "Remove tags from document: %(object)s"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Премахване на маркери от документ: %(object)s"
 
 #: views.py:266
 #, python-format
-<<<<<<< HEAD
 msgid "Remove reviewers from %(count)d document."
-=======
-msgid "Remove tags from %(count)d document."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Премахнете маркери от %(count)d документ."
 
 #: views.py:267
 #, python-format
-<<<<<<< HEAD
 msgid "Remove reviewers from %(count)d documents."
-=======
-msgid "Remove tags from %(count)d documents."
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Премахнете маркери от %(count)d документа."
 
 #: views.py:272
@@ -501,7 +297,6 @@ msgid "Remove"
 msgstr "Премахнете"
 
 #: views.py:286
-<<<<<<< HEAD
 msgid "Reviewers to be removed."
 msgstr "Маркери за премахване."
 
@@ -519,23 +314,4 @@ msgstr "Прикачете маркер"
 
 #: workflow_actions.py:63
 msgid "Reviewers to remove from the document"
-=======
-msgid "Tags to be removed."
-msgstr "Маркери за премахване."
-
-#: wizard_steps.py:15
-msgid "Select tags"
-msgstr "Изберете маркери"
-
-#: workflow_actions.py:20
-msgid "Tags to attach to the document"
-msgstr "Маркери за прикачване към документа"
-
-#: workflow_actions.py:25
-msgid "Attach tag"
-msgstr "Прикачете маркер"
-
-#: workflow_actions.py:63
-msgid "Tags to remove from the document"
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 msgstr "Маркери за премахване от документа"

@@ -25,11 +25,7 @@ class DocumentReviewerWidget(SourceColumnWidget):
                 user=self.request.user
             )
         except PermissionDenied:
-<<<<<<< HEAD
             queryset = self.value.reviewers.none()
-=======
-            queryset = self.value.reviewer.none()
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
         else:
             queryset = self.value.get_reviewers(
                 permission=permission_reviewer_view,

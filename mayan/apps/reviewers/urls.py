@@ -6,18 +6,12 @@ from .api_views import (
     APIReviewerDetailView
 )
 from .views import (
-<<<<<<< HEAD
     DocumentReviewerListView, ReviewerAttachActionView, ReviewerCreateView,
     ReviewerDeleteActionView, ReviewerEditView, ReviewerListView, ReviewerRemoveActionView,
     ReviewerDocumentListView,
     DocumentReviewerListView, ReviewerAddActionView, ReviewerCreateView,
     ReviewerDeleteActionView, ReviewerEditView, ReviewerListView, ReviewerRemoveActionView,
     ReviewerDocumentListView
-=======
-    DocumentReviewerListView, ReviewerAddActionView, ReviewerCreateView,
-    ReviewerDeleteActionView, ReviewerEditView, ReviewerListView, ReviewerRemoveActionView,
-    ReviewerDocumentListView, ReviewerActionView, ReviewerAttachActionView
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 )
 
 urlpatterns = [
@@ -27,11 +21,7 @@ urlpatterns = [
     ),
     url(
         regex=r'^documents/(?P<document_id>\d+)/reviewers/multiple/attach/$',
-<<<<<<< HEAD
         name='reviewer_attach', view=ReviewerAttachActionView.as_view()
-=======
-        name='reviewer_attach', view=ReviewerActionView.as_view()
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
     ),
     url(
         regex=r'^documents/(?P<document_id>\d+)/reviewers/multiple/add/$',
@@ -77,29 +67,17 @@ urlpatterns = [
     url(
         regex=r'^reviewers/multiple/delete/$', name='reviewer_multiple_delete',
         view=ReviewerDeleteActionView.as_view()
-<<<<<<< HEAD
     ),
-=======
-    )
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
 ]
 
 api_urls = [
     url(regex=r'^reviewers/$', view=APIReviewerListView.as_view(), name='reviewer-list'),
     url(
-<<<<<<< HEAD
         regex=r'^reviewers/(?P<reviewer_id>[0-9]+)/$', view=APIReviewerDetailView.as_view(),
         name='reviewer-detail'
     ),
     url(
         regex=r'^reviewers/(?P<reviewer_id>[0-9]+)/documents/$',
-=======
-        regex=r'^reviewer/(?P<reviewer_id>[0-9]+)/$', view=APIReviewerDetailView.as_view(),
-        name='reviewer-detail'
-    ),
-    url(
-        regex=r'^reviewer/(?P<reviewer_id>[0-9]+)/documents/$',
->>>>>>> 8a29a6a6d9e0878c07ded56efd2ea18caddea7a7
         view=APIReviewerDocumentListView.as_view(), name='reviewer-document-list'
     ),
     url(
