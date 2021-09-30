@@ -69,7 +69,7 @@ class ObjectCopyView(
         }
 
         context['title'] = _(
-            'Make a copy of %(object_name)s "%(object)s"?'
+            'Make a copy of "%(object)s"?'
         ) % {
             'object_name': self.get_object_name(context=context),
             'object': self.external_object

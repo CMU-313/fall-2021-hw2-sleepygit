@@ -24,11 +24,11 @@ class Tag(ExtraDataModelMixin, models.Model):
     """
     label = models.CharField(
         db_index=True, help_text=_(
-            'A short text used as the tag name.'
+            'A short text used as the name.'
         ), max_length=128, unique=True, verbose_name=_('Label')
     )
     color = RGBColorField(
-        help_text=_('The RGB color values for the tag.'),
+        help_text=_('The RGB color values for this.'),
         verbose_name=_('Color')
     )
     documents = models.ManyToManyField(
