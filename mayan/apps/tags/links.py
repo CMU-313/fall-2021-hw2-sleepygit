@@ -93,6 +93,10 @@ link_tag_multiple_delete = Link(
     icon=icon_tag_delete, permissions=(permission_tag_delete,),
     text=_('Delete'), view='tags:tag_multiple_delete'
 )
+link_reviewer_multiple_delete = Link(
+    icon=icon_tag_delete, permissions=(permission_tag_delete,),
+    text=_('Delete'), view='tags:reviewer_multiple_delete'
+)
 link_tag_document_list = Link(
     args='object.id', icon=icon_tag_document_list,
     text=('Documents'), view='tags:tag_document_list'

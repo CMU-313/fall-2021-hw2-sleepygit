@@ -27,7 +27,7 @@ from .links import (
     link_document_multiple_tag_multiple_remove,
     link_document_tag_multiple_remove, link_document_tag_multiple_attach, link_tag_create,
     link_tag_delete, link_reviewer_delete, link_tag_edit, link_reviewer_edit, link_tag_list, 
-    link_reviewer_create, link_reviewer_list, link_tag_multiple_delete, link_tag_document_list,
+    link_reviewer_create, link_reviewer_list, link_tag_multiple_delete, link_reviewer_multiple_delete, link_tag_document_list,
     link_document_multiple_reviewer_multiple_add, 
     link_document_multiple_reviewer_multiple_remove
 )
@@ -188,8 +188,11 @@ class TagsApp(MayanAppConfig):
             ),
             sources=(Document,)
         )
+        # menu_multi_item.bind_links(
+        #     links=(link_tag_multiple_delete,), sources=(Tag,)
+        # )
         menu_multi_item.bind_links(
-            links=(link_tag_multiple_delete,), sources=(Tag,)
+            links=(link_reviewer_multiple_delete,), sources=(Tag,)
         )
         # menu_object.bind_links(
         #     links=(

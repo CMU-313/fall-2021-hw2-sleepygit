@@ -613,7 +613,7 @@ class SingleObjectCreateView(
                 context = self.get_context_data()
 
                 messages.error(
-                    message=_('%(object)s not created, error: %(error)s') % {
+                    message=_('Item not created, error: %(error)s') % {
                         'object': self.get_object_name(context=context),
                         'error': exception
                     }, request=self.request
@@ -624,7 +624,7 @@ class SingleObjectCreateView(
 
             messages.success(
                 message=_(
-                    '%(object)s created successfully.'
+                    'Item created successfully.'
                 ) % {'object': self.get_object_name(context=context)},
                 request=self.request
             )
@@ -663,7 +663,7 @@ class SingleObjectDeleteView(
             result = super().delete(request, *args, **kwargs)
         except Exception as exception:
             messages.error(
-                message=_('%(object)s not deleted, error: %(error)s.') % {
+                message=_('Item not deleted, error: %(error)s.') % {
                     'object': object_name,
                     'error': exception
                 }, request=self.request
@@ -672,7 +672,7 @@ class SingleObjectDeleteView(
         else:
             messages.success(
                 message=_(
-                    '%(object)s deleted successfully.'
+                    'Item deleted successfully.'
                 ) % {'object': object_name},
                 request=self.request
             )
@@ -830,7 +830,7 @@ class SingleObjectEditView(
                 raise
             else:
                 messages.error(
-                    message=_('%(object)s not updated, error: %(error)s.') % {
+                    message=_('Item not updated, error: %(error)s.') % {
                         'object': object_name,
                         'error': exception
                     }, request=self.request
@@ -839,7 +839,7 @@ class SingleObjectEditView(
         else:
             messages.success(
                 message=_(
-                    '%(object)s updated successfully.'
+                    'Item updated successfully.'
                 ) % {'object': object_name}, request=self.request
             )
 
