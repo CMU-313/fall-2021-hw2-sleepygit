@@ -11,5 +11,5 @@ menu_reviewers = Menu(
         app_label='reviewers', model_name='Reviewer',
         object_permission=permission_reviewer_view,
         view_permission=permission_reviewer_create,
-    ), icon=icon_menu_tags, label=_('Reviewers'), name='reviewerss'
+    ), icon=icon_menu_tags, label=_('IHATEPEOPLE'), name='reviewerss'
 )
