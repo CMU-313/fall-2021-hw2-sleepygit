@@ -8,7 +8,7 @@ from mayan.apps.mayan_statistics.icons import icon_statistics
 from .icons import (
     icon_dashboard_documents_in_trash, icon_dashboard_document_types,
     icon_dashboard_pages_per_month, icon_dashboard_new_documents_this_month,
-    icon_dashboard_total_document
+    icon_dashboard_total_document, icon_application_dashboard
 )
 from .permissions import (
     permission_document_view, permission_document_type_view
@@ -59,25 +59,6 @@ class DashboardWidgetDocumentsTotal(DashboardWidgetNumeric):
             queryset=Document.valid.all()
         ).count()
         return super().render(request)
-
-class DashboardWidgetApplicationDashboard(DashboardWidgetNumeric):
-    icon = icon_dashboard_pages_per_month
-    label = _('Application Dashboard')
-    link = reverse_lazy(viewname='documents:document_list')
-
-    def render(self, request):
-        AccessControlList = apps.get_model(
-            app_label='acls', model_name='AccessControlList'
-        )
-        Document = apps.get_model(
-            app_label='documents', model_name='Document'
-        )
-        self.count = AccessControlList.objects.restrict_queryset(
-            permission=permission_document_view, user=request.user,
-            queryset=Document.valid.all()
-        ).count()
-        return super().render(request)
-
 
 class DashboardWidgetDocumentsInTrash(DashboardWidgetNumeric):
     icon = icon_dashboard_documents_in_trash
@@ -148,7 +129,7 @@ class DashboardWidgetDocumentsPagesNewThisMonth(DashboardWidgetNumeric):
 
 
 class DashboardWidgetApplicationDashboard(DashboardWidgetNumeric):
-    icon = icon_dashboard_pages_per_month
+    icon = icon_application_dashboard
     label = _('Application Dashboard')
     link = reverse_lazy(viewname='documents:document_application_list')
 

@@ -37,6 +37,10 @@ icon_document_trash_send = Icon(
     driver_name='fontawesome', symbol='trash-alt'
 )
 
+icon_application_dashboard = Icon(
+    driver_name='fontawesome-dual', primary_symbol='user-check',
+    secondary_symbol='file'
+)
 
 icon_document_type_change = icon_document_type
 
