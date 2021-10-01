@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 from mayan.apps.navigation.classes import Menu
 from mayan.apps.navigation.utils import get_cascade_condition
 
-from .icons import icon_menu_tags
+from .icons import icon_menu_tags, icon_menu_reviewers
 from .permissions import permission_tag_create, permission_tag_view
 
 menu_tags = Menu(
@@ -15,6 +15,6 @@ menu_tags = Menu(
 )
 
 menu_reviewers = Menu(
-    icon=icon_menu_tags, label=_('Reviewers'),
+    icon=icon_menu_reviewers, label=_('Reviewers'),
     name='reviewers'
 )
