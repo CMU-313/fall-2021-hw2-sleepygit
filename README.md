@@ -41,7 +41,11 @@
     are its workflow system, role based access control, and REST API.
   <p>
 
-</div>
-<h2 align="center">Code Artifacts: Oct 1st</h2>
+<p align="center">
+    <img width="400" src="https://gitlab.com/mayan-edms/mayan-edms/raw/master/docs/_static/overview.gif">
+</p>
 
-Manual Testing Script for the new features can be found in this link: https://docs.google.com/document/d/1Xy7My4wbPAb79oHEmB09VubXXCQZUkHSMnN2aGcK5Vw/edit?usp=sharing 
+</div>
+<h2 align="center">Code Artifacts</h2>
+
+Manual Testing Script that is due Sep 28, 2021 can be found in this link: https://docs.google.com/document/d/1Xy7My4wbPAb79oHEmB09VubXXCQZUkHSMnN2aGcK5Vw/edit?usp=sharing 
